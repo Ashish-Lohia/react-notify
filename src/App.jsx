@@ -8,7 +8,6 @@ const API_BASE_URL = "http://localhost:8000";
 const WS_BASE_URL = "ws://localhost:8000";
 const TOKEN_KEY = "notification_app_token";
 
-// Auth token management using localStorage
 const getAuthToken = () => {
   try {
     return localStorage.getItem(TOKEN_KEY);
@@ -225,7 +224,7 @@ const useWebSocket = (userId, onMessage) => {
 export const NotificationApp = () => {
   const [user, setUser] = useState(null);
   const [notifications, setNotifications] = useState([]);
-  const [loading, setLoading] = useState(true); // Start with loading true
+  const [loading, setLoading] = useState(true);
   const [showNotifications, setShowNotifications] = useState(false);
   const [error, setError] = useState(null);
 
